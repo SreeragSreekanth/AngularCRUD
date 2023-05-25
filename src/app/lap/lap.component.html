@@ -1,0 +1,35 @@
+<a class="btn btn-primary btn-lg" routerLink="/">
+    <i class="fa fa-arrow-left"></i> Back</a>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <h2>
+              Add New Product
+            </h2>
+          </div>
+          <div class="card-body">
+            <form (submit)="createLaptop()">
+              <div class="form-group">
+                <label for="pid">Laptop ID:</label>
+                <input type="number" id="pid" name="pid" [(ngModel)]="laptopData.pid" required>
+              </div>
+              <div class="form-group">
+                <label for="pname">Laptop Name:</label>
+                <input type="text" id="pname" name="pname" [(ngModel)]="laptopData.pname" required>
+              </div>
+              <div class="form-group">
+                <label for="pcost">Laptop Cost:</label>
+                <input type="number" id="pcost" name="pcost" [(ngModel)]="laptopData.pcost" required>
+              </div>
+              <button type="submit">Create Laptop</button>
+            </form>
+            <h3 class="text-success" *ngIf="isAdded">{{confirmationString}}</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>

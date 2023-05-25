@@ -1,0 +1,31 @@
+<button type="button" class="btn btn-primary" routerLink="/lap">
+    <i class="fa fa-plus"></i> Add New Laptop</button>
+    
+    <nav class="navbar navbar-light bg-light" style="display:flex;flex-direction: row;justify-content: center;">
+        <span class="navbar-brand mb-0 h1">LAPTOPS</span>
+      </nav>
+
+      <table class="table" style="text-align: center;">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Laptop ID</th>
+            <th scope="col">Laptop Name</th>
+            <th scope="col">Laptop Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let laptop of laptoparray" class="text-center">
+                <td>{{ laptop.id}}</td>
+                <td>{{ laptop.pid}}</td>
+                <td>{{ laptop.pname}}</td>
+                <td>{{ laptop.pcost}}</td>
+                <td>
+                     <button type="button" class="btn btn-danger" (click)="deleteLap(laptop.id)">Delete</button>
+                  </td>
+                <td>
+                  <button type="button" class="btn btn-info" [routerLink]="['/update', laptop.id]">Update</button>
+
+                </td>        
+        </tbody>
+      </table>

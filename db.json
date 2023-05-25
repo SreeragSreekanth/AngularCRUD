@@ -1,0 +1,22 @@
+{
+  "laptops": [
+    {
+      "id": 1,
+      "pid": 1,
+      "pname": "ACER",
+      "pcost": 45000
+    },
+    {
+      "id": 2,
+      "pid": 2,
+      "pname": "ASUS",
+      "pcost": 50000
+    },
+    {
+      "pid": "3",
+      "pname": "SAMSUNG",
+      "pcost": "95000",
+      "id": 3
+    }
+  ]
+}
